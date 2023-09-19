@@ -11,7 +11,13 @@ namespace Classi_lavoro
     {
         static void Main(string[] args)
         {
-            Prodotto oggetto = new Prodotto("test", 99);
+            Console.WriteLine("inserisci nome: ");
+            string nome = Console.ReadLine();
+
+            Console.WriteLine("inserisci prezzo: ");
+            int prezzo = int.Parse(Console.ReadLine());
+
+            Prodotto oggetto = new Prodotto(nome, prezzo);
             Console.WriteLine("Nome prodotto: " + oggetto.ReturnNome() + "\nPrezzo prodotto: " + oggetto.ReturnPrezzo());
         }
 
@@ -41,7 +47,7 @@ namespace Classi_lavoro
     }
 
 
-    //prodotto con builder senza paramentri
+    //prodotto con builder senza paramentri..?
     public class Prodotto2
     {
         private string nome;
