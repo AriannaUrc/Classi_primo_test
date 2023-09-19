@@ -49,14 +49,24 @@ namespace Classi_lavoro
             this.prezzo = 0;
         }
 
-        public string ReturnNome()
+        public string GetNome()
         {
             return nome;
         }
 
-        public int ReturnPrezzo()
+        public void SetNome(string nome)
+        {
+            this.nome = nome;
+        }
+
+        public int GetPrezzo()
         {
             return prezzo;
+        }
+
+        public void SetPrezzo(int prezzo)
+        {
+            this.prezzo = prezzo;
         }
     }
 }
