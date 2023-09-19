@@ -11,6 +11,7 @@ namespace Classi_lavoro
     {
         static void Main(string[] args)
         {
+            //prendo nome e prezzo dall'utente
             Console.WriteLine("inserisci nome: ");
             string nome = Console.ReadLine();
 
@@ -19,6 +20,7 @@ namespace Classi_lavoro
 
 
            
+            //stampo gli oggetti con e senza paramentri
             Prodotto oggetto = new Prodotto(nome, prezzo);
             Console.WriteLine("Nome prodotto: " + oggetto.GetNome() + "\nPrezzo prodotto: " + oggetto.GetPrezzo());
 
@@ -39,8 +41,18 @@ namespace Classi_lavoro
 
         public Prodotto(string nome, int prezzo)
         {
+            if(prezzo > 0)
+            {
+                this.prezzo= prezzo;
+            }
+            else
+            {
+                this.prezzo = 0;
+            }
+
             this.nome = nome;
-            this.prezzo = prezzo;
+
+            
         }
 
         public Prodotto()
@@ -66,7 +78,14 @@ namespace Classi_lavoro
 
         public void SetPrezzo(int prezzo)
         {
-            this.prezzo = prezzo;
+            if (prezzo > 0)
+            {
+                this.prezzo = prezzo;
+            }
+            else
+            {
+                this.prezzo = 0;
+            }
         }
     }
 }
