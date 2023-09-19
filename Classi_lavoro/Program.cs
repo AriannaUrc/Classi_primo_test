@@ -20,13 +20,13 @@ namespace Classi_lavoro
 
            
             Prodotto oggetto = new Prodotto(nome, prezzo);
-            Console.WriteLine("Nome prodotto: " + oggetto.ReturnNome() + "\nPrezzo prodotto: " + oggetto.ReturnPrezzo());
+            Console.WriteLine("Nome prodotto: " + oggetto.GetNome() + "\nPrezzo prodotto: " + oggetto.GetPrezzo());
 
 
             Console.WriteLine("\n\nSenza parametri:\n");
 
             Prodotto oggetto1 = new Prodotto();
-            Console.WriteLine("Nome prodotto: " + oggetto1.ReturnNome() + "\nPrezzo prodotto: " + oggetto1.ReturnPrezzo());
+            Console.WriteLine("Nome prodotto: " + oggetto1.GetNome() + "\nPrezzo prodotto: " + oggetto1.GetPrezzo());
         }
 
     }
