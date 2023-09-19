@@ -17,8 +17,16 @@ namespace Classi_lavoro
             Console.WriteLine("inserisci prezzo: ");
             int prezzo = int.Parse(Console.ReadLine());
 
+
+           
             Prodotto oggetto = new Prodotto(nome, prezzo);
             Console.WriteLine("Nome prodotto: " + oggetto.ReturnNome() + "\nPrezzo prodotto: " + oggetto.ReturnPrezzo());
+
+
+            Console.WriteLine("\n\nSenza parametri:\n");
+
+            Prodotto oggetto1 = new Prodotto();
+            Console.WriteLine("Nome prodotto: " + oggetto1.ReturnNome() + "\nPrezzo prodotto: " + oggetto1.ReturnPrezzo());
         }
 
     }
@@ -35,31 +43,10 @@ namespace Classi_lavoro
             this.prezzo = prezzo;
         }
 
-        public string ReturnNome()
+        public Prodotto()
         {
-            return nome;
-        }
-
-        public int ReturnPrezzo()
-        {
-            return prezzo;
-        }
-    }
-
-
-    //prodotto con builder senza paramentri..?
-    public class Prodotto2
-    {
-        private string nome;
-        private int prezzo;
-
-        public Prodotto2()
-        {
-            string nome = "test";
-            int prezzo = 44;
-
-            this.nome = nome;
-            this.prezzo = prezzo;
+            this.nome = "none";
+            this.prezzo = 0;
         }
 
         public string ReturnNome()
